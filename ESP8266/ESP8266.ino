@@ -111,7 +111,7 @@ void send_datas() {
   client.stop();
 }
 void loop() {
-  if (Serial.available() > 0) {
+  if (Serial.available() > 0) { //ak sa v UART buffri objavia dáta
     my_datas = Serial.readStringUntil('\n'); //nacitaj ECV po \n (možnosť zadať viac sucasne napr: PP100AA\nPP101AA - za posledné EČV je vlozeny znak \n automaticky)
     send_datas();
   }
