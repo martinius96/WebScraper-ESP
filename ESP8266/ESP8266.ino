@@ -5,14 +5,14 @@
 /*|Len pre edukačné účely                                      |*/
 /*|------------------------------------------------------------|*/
 #include <ESP8266WiFi.h>
-
+#include <WiFiClientSecure.h>
 const char * ssid = "MENO_WIFI";
 const char * password = "HESLO_WIFI";
 
 const char* host = "www.minv.sk";
 String my_datas; //Hľadané EČV --> Možno hľadať aj C značky
-const int serverPort = 80; //http port
-WiFiClient client;
+const int serverPort = 443; //https port
+WiFiClientSecure client;
 String url = "/?odcudzene-mot-vozidla";
 const char terminator1[2] = ">";
 const char terminator2[2] = "<";
@@ -28,6 +28,7 @@ void setup() {
   Serial.println("IP adresa: ");
   Serial.println(WiFi.localIP());
   Serial.println("Ready");
+  client.setInsecure();
   while (Serial.available() <= 0) {
     Serial.println(" ZADAJ EVC V TVARE: BAXXXZZ ");
     delay(1000);
@@ -36,6 +37,7 @@ void setup() {
 void send_datas() {
   String data = "ec=" + my_datas;
   if (client.connect(host, serverPort)) {
+    //  Serial.println("Pripojenie uspesne");
     client.println("POST " + url + " HTTP/1.0");
     client.println("Host: " + (String)host);
     client.println("User-Agent: ESP32");
@@ -47,8 +49,9 @@ void send_datas() {
     client.println(data);
     while (client.connected()) {
       String line = client.readStringUntil('\n');
+      // Serial.println(line);
       if (line.indexOf("Podmienke vyhovuje: 1 záznam") > 0) {
-        Serial.println("Po vozidle s EČV " + my_datas + " je vyhlásené pátranie! Kontaktujte políciu na čísle 158!");
+        Serial.println("Po vozidle s EČV " + my_datas + " je vyhlásené pátranie!");
       }
       if (line.indexOf("Podmienke vyhovuje: 0 záznamov") > 0) {
         Serial.println("Po vozidle s EČV " + my_datas + " nie je vyhlásené pátranie");
