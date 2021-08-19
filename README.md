@@ -9,3 +9,5 @@
 * **Vstup EČV cez UART monitor (115200 baud/s)**
 * Možnosť modifikácie zdrojového kódu pre mikrokontróler na zadanie VIN (iný argument requestu, viz. HTML form)
 * Možnosť zadať viac EČV súčasne s oddeľovaním cez znak \n, za posledné EČV je znak vložený automaticky
+# Príklad výstupu pre príklady UART:
+![HAKA - Výstup UART](https://i.imgur.com/zoDQNhr.png)
