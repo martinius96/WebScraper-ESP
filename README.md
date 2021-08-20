@@ -16,6 +16,6 @@
 * **Vstup EČV cez UART monitor (115200 baud/s)**
 * Možnosť modifikácie zdrojového kódu pre mikrokontróler na zadanie VIN (potrebný kľúč v requeste vin)
 * **Možnosť zadať viac EČV súčasne s oddeľovaním cez znak \n, za posledné EČV je znak vložený automaticky** (viz obrázok nižšie)
-* Z hľadiska buffra UART zbernice možno hľadať naraz u ESP32 31 EČV, u ESP8266 15 EČV   
+* Z hľadiska buffra UART zbernice možno hľadať naraz u ESP32 32 EČV, u ESP8266 16 EČV (za predpokladu 7 znakových EČV + ukončovacie znaky \n)   
 # Príklad výstupu pre príklady UART:
 ![Výstup UART - hľadané vozidlá](https://i.imgur.com/dHOXFNc.png)
