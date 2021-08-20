@@ -84,7 +84,7 @@ void send_datas() {
     while (client.connected()) {
       String line = client.readStringUntil('\n');
       if (line.indexOf("Podmienke vyhovuje: 1 záznam") > 0) {
-        Serial.println("Po vozidle s EČV " + my_datas + " je vyhlásené pátranie! Kontaktujte políciu na čísle 158!");
+        Serial.println("Po vozidle s EČV " + my_datas + " je vyhlásené pátranie!");
       }
       if (line.indexOf("Podmienke vyhovuje: 0 záznamov") > 0) {
         Serial.println("Po vozidle s EČV " + my_datas + " nie je vyhlásené pátranie");
