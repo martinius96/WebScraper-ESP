@@ -2,7 +2,7 @@
 * Systém je postavený na WiFi platformách ESP32, ESP8266 (Espressif Systems)
 * **Len pre edukačné účely! Zdroj dát o kradnutých vozidlách: https://www.hakasystem.eu/kradeze-automobilov**
 * Overenie EČV sa realizuje skrz HTTPS POST požiadavku na stránku http://www.minv.sk/?odcudzene-mot-vozidla
-* EČV je priradené ku kľúču ec, ktorý očakáva webserver (backend)
+* EČV je priradené ku parametru ec, ktorý očakáva backend (napr: ec=LL000ZZ)
 #
 ![HTML kód - parameter pre EČV](https://i.imgur.com/XgJYPC8.png)
 * Výpis o pátraní po vozidle spolu s informáciami o vozidle
@@ -15,6 +15,6 @@
 * Možnosť overovať vozidlá, prípojné zariadenia, aj špeciálne značky (napr. kategória C a F)
 * **Vstup EČV cez UART monitor (115200 baud/s)**
 * Možnosť modifikácie zdrojového kódu pre mikrokontróler na zadanie VIN (potrebný kľúč v requeste vin)
-* Možnosť zadať viac EČV súčasne s oddeľovaním cez znak \n, za posledné EČV je znak vložený automaticky (viz obrázok nižšie)
+* **Možnosť zadať viac EČV súčasne s oddeľovaním cez znak \n, za posledné EČV je znak vložený automaticky** (viz obrázok nižšie)
 # Príklad výstupu pre príklady UART:
 ![Výstup UART - hľadané vozidlá](https://i.imgur.com/dHOXFNc.png)
