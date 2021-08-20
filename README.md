@@ -8,7 +8,7 @@
 * Výpis o pátraní po vozidle spolu s informáciami o vozidle
 * Informácie sú scrapované zo zdrojového HTML kódu webstránky, ktorá je na request odoslaná webserverom (server response)
 * Scraper hľadá informácie v tabuľke medzi párovými <td> </td> tagmi, ak sa na danom riadku nachádza aj popis kategórie
-* Vykoná sa orezanie informácie medzi > a < (text medzi tagmi)
+* Vykoná sa orezanie informácie medzi > a < (text medzi tagmi --> OSOBNÉ VOZIDLO, RENAULT a ďalšie parametre...)
 #
 ![Výstup HTML zdrojový kód](https://i.imgur.com/r6PuXMz.png)
 * Scraper prechádza HTML kód webstránky riadok po riadku
