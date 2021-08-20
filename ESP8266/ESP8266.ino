@@ -1,9 +1,10 @@
-/*|------------------------------------------------------------|*/
-/*|OVERENIE ŠPZ - ESP8266 (Generic / NodeMCU, Wemos D1 Mini)   |*/
-/*|Používať nastavenie Serial monitoru bez návratového vozíka! |*/
-/*|Author: martinius96                                         |*/
-/*|Len pre edukačné účely                                      |*/
-/*|------------------------------------------------------------|*/
+/*|-----------------------------------------------------------------|*/
+/*|OVERENIE ŠPZ - ESP8266 (Generic / NodeMCU, Wemos D1 Mini)        |*/
+/*|Používať nastavenie Serial monitoru Nový riadok (NL - New Line)! |*/
+/*|Author: martinius96                                              |*/
+/*|Len pre edukačné účely!                                          |*/
+/*|-----------------------------------------------------------------|*/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 const char * ssid = "MENO_WIFI";
