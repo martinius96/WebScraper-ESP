@@ -1,7 +1,7 @@
 # OVERENIE EČV s využitím mikrokontrolérov
 * Systém je postavený na WiFi platformách ESP32, ESP8266 (Espressif Systems)
 * **Len pre edukačné účely! Zdroj dát o kradnutých vozidlách: https://www.hakasystem.eu/kradeze-automobilov**
-* Overenie EČV sa realizuje skrz HTTPS POST požiadavku na stránku http://www.minv.sk/?odcudzene-mot-vozidla
+* Overenie EČV sa realizuje skrz HTTPS POST požiadavku na stránku https://www.minv.sk/?odcudzene-mot-vozidla
 * EČV je priradené ku parametru ec, ktorý očakáva backend (napr: ec=LL000ZZ)
 #
 ![HTML kód - parameter pre EČV](https://i.imgur.com/XgJYPC8.png)
