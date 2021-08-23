@@ -1,4 +1,4 @@
-# OVERENIE EČV s využitím mikrokontrolérov
+# Overenie EČV s využitím mikrokontrolérov
 * Systém je postavený na WiFi platformách ESP32, ESP8266 (Espressif Systems)
 * **Len pre edukačné účely! Zdroj dát o kradnutých vozidlách: https://www.hakasystem.eu/kradeze-automobilov**
 * Overenie EČV sa realizuje skrz POST request na stránku https://www.minv.sk/?odcudzene-mot-vozidla
@@ -13,8 +13,8 @@
 ![Výstup HTML zdrojový kód](https://i.imgur.com/r6PuXMz.png)
 * Scraper prechádza HTML kód webstránky riadok po riadku
 * Možnosť overovať vozidlá, prípojné zariadenia, aj špeciálne značky (napr. kategória C a F)
-* **Vstup EČV cez UART monitor (115200 baud/s)**
-* Možnosť modifikácie zdrojového kódu pre mikrokontróler na zadanie VIN (potrebný kľúč v requeste vin)
+* **Vstup EČV sa realizuje cez UART monitor (115200 baud/s)**
+* Možnosť modifikácie zdrojového kódu pre mikrokontróler na zadanie VIN (potrebný kľúč vin v requeste)
 * **Možnosť zadať viac EČV súčasne s oddeľovaním cez znak \n, za posledné EČV je znak vložený automaticky** (viz obrázok nižšie)
 * Z hľadiska buffra UART zbernice možno hľadať naraz u ESP32 32 EČV, u ESP8266 16 EČV (za predpokladu 7 znakových EČV + ukončovacie znaky \n)   
 # Príklad výstupu pre príklady UART:
