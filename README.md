@@ -7,7 +7,7 @@
 ![HTML kód - parameter pre EČV](https://i.imgur.com/XgJYPC8.png)
 * Výpis o pátraní po vozidle spolu s informáciami o vozidle sú dostupné v HTML kóde
 * Informácie sú scrapované zo zdrojového HTML kódu webstránky, ktorá je na request odoslaná webserverom (server response)
-* Scraper hľadá informácie v tabuľke medzi párovými tagmi &lt;TD&gt;, ak sa na danom riadku nachádza aj popis kategórie
+* Scraper hľadá informácie v tabuľke medzi párovými &lt;TD&gt; &lt;/TD&gt; tagmi, ak sa na danom riadku nachádza aj popis kategórie
 * Vykoná sa orezanie informácie medzi > a < (text medzi tagmi --> OSOBNÉ VOZIDLO, RENAULT a ďalšie parametre...)
 #
 ![Výstup HTML zdrojový kód](https://i.imgur.com/r6PuXMz.png)
