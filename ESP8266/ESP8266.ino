@@ -22,16 +22,16 @@ void setup() {
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    Serial.print(".");
+    Serial.print(F("."));
   }
-  Serial.println("");
-  Serial.println("WiFi uspesne pripojene");
-  Serial.println("IP adresa: ");
+  Serial.println(F(""));
+  Serial.println(F("WiFi uspesne pripojene"));
+  Serial.println(F("IP adresa: "));
   Serial.println(WiFi.localIP());
-  Serial.println("Ready");
+  Serial.println(F("Ready"));
   client.setInsecure();
   while (Serial.available() <= 0) {
-    Serial.println(" ZADAJ EVC V TVARE: BAXXXZZ ");
+    Serial.println(F(" ZADAJ EVC V TVARE: BAXXXZZ "));
     delay(1000);
   }
 }
@@ -41,10 +41,10 @@ void send_datas() {
     //  Serial.println("Pripojenie uspesne");
     client.println("POST " + url + " HTTP/1.0");
     client.println("Host: " + (String)host);
-    client.println("User-Agent: ESP32");
-    client.println("Connection: close");
-    client.println("Content-Type: application/x-www-form-urlencoded;");
-    client.print("Content-Length: ");
+    client.println(F("User-Agent: ESP32"));
+    client.println(F("Connection: close"));
+    client.println(F("Content-Type: application/x-www-form-urlencoded;"));
+    client.print(F("Content-Length: "));
     client.println(data.length());
     client.println();
     client.println(data);
@@ -65,7 +65,7 @@ void send_datas() {
         parameter = strtok(str, terminator1);
         //Serial.println(parameter);
         parameter = strtok(NULL, terminator2);
-        Serial.print("Druh vozidla: ");  Serial.println(parameter);
+        Serial.print(F("Druh vozidla: "));  Serial.println(parameter);
       }
       if (line.indexOf("Značka: &nbsp;") > 0) {
         line = client.readStringUntil('\n');
@@ -75,7 +75,7 @@ void send_datas() {
         parameter = strtok(str, terminator1);
         //Serial.println(parameter);
         parameter = strtok(NULL, terminator2);
-        Serial.print("Značka vozidla: ");  Serial.println(parameter);
+        Serial.print(F("Značka vozidla: "));  Serial.println(parameter);
       }
       if (line.indexOf("Obchodný názov: &nbsp;") > 0) {
         line = client.readStringUntil('\n');
@@ -85,7 +85,7 @@ void send_datas() {
         parameter = strtok(str, terminator1);
         //Serial.println(parameter);
         parameter = strtok(NULL, terminator2);
-        Serial.print("Model vozidla: ");  Serial.println(parameter);
+        Serial.print(F("Model vozidla: "));  Serial.println(parameter);
       }
       if (line.indexOf("Farba: &nbsp;") > 0) {
         line = client.readStringUntil('\n');
@@ -95,7 +95,7 @@ void send_datas() {
         parameter = strtok(str, terminator1);
         //Serial.println(parameter);
         parameter = strtok(NULL, terminator2);
-        Serial.print("Farba vozidla: ");  Serial.println(parameter);
+        Serial.print(F("Farba vozidla: "));  Serial.println(parameter);
       }
       if (line.indexOf("VIN: &nbsp;") > 0) {
         line = client.readStringUntil('\n');
@@ -105,12 +105,12 @@ void send_datas() {
         parameter = strtok(str, terminator1);
         //Serial.println(parameter);
         parameter = strtok(NULL, terminator2);
-        Serial.print("VIN kód: ");  Serial.println(parameter);
+        Serial.print(F("VIN kód: "));  Serial.println(parameter);
       }
     }
     Serial.println();
   } else {
-    Serial.println("Problem s pripojenim na stránku Ministerstva vnútra Slovenskej republiky!");
+    Serial.println(F("Problem s pripojenim na stránku Ministerstva vnútra Slovenskej republiky!"));
   }
   client.stop();
 }
