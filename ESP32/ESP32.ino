@@ -5,6 +5,8 @@
 /*|Len pre edukačné účely!                                          |*/
 /*|-----------------------------------------------------------------|*/
 
+//Mozno vyskusat v on-line simulátore Wokwi: https://wokwi.com/projects/344494550030484052
+
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 const char * ssid = "MENO_WIFI";
@@ -73,6 +75,7 @@ void setup() {
 void send_datas() {
   String data = "ec=" + my_datas;
   if (client.connect(host, serverPort)) {
+    Serial.println(F("Pripojenie na stranku MinvSR uspesne"));
     client.println("POST " + url + " HTTP/1.0");
     client.println("Host: " + (String)host);
     client.println(F("User-Agent: ESP32"));
