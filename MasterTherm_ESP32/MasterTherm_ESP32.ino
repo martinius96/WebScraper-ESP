@@ -1,6 +1,7 @@
 //Web scraper sa autorizuje cez HTTP Auth Basic ako normálny user
 //Vie vyparsovať dáta z tabuľky HTML kódu webrozhrania: https://i.imgur.com/9P2Emih.png
 //Použité pre rozhranie pre tepelné čerpadlo AirMaster od MasterThermu
+//Scraper pre konkrétne dáta nie je súčasťou
 
 #include <WiFi.h>
 const char* ssid = "NAZOV_WIFI"; //SSID vasej WiFi siete
