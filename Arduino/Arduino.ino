@@ -32,7 +32,7 @@ void setup() {
 }
 
 void send_datas() {
-  String data = "ec=" + my_datas;
+  String data = "ecv=" + my_datas;
   if (client.connect(serverName, serverPort)) {
     client.println("POST " + url + " HTTP/1.0");
     client.println("Host: " + (String)serverName);
