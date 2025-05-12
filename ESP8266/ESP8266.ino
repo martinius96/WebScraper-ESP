@@ -36,7 +36,7 @@ void setup() {
   }
 }
 void send_datas() {
-  String data = "ec=" + my_datas;
+  String data = "ecv=" + my_datas;
   if (client.connect(host, serverPort)) {
     //  Serial.println("Pripojenie uspesne");
     client.println("POST " + url + " HTTP/1.0");
