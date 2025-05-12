@@ -78,7 +78,7 @@ void setup() {
   }
 }
 void send_datas() {
-  String data = "ec=" + my_datas;
+  String data = "ecv=" + my_datas;
   if (client.connect(host, serverPort)) {
     Serial.println(F("Pripojenie na stranku MinvSR uspesne"));
     client.println("POST " + url + " HTTP/1.0");
