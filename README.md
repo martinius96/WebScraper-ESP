@@ -1,4 +1,6 @@
 # Overenie EČV s využitím mikrokontrolérov
+* **v roku 2025 nie sú zdrojové kódy kompatibilné s MINV stránkou. Zmenil sa parameter v HTML formulári a tiež riadny výpisu sú iné, než na aké reagoval pôvodný parser**
+#
 * Systém je postavený na WiFi platformách ESP32, ESP8266 (Espressif Systems)
 * **Len pre edukačné účely! Zdroj dát o kradnutých vozidlách: https://www.hakasystem.eu/kradeze-automobilov**
 * Overenie EČV sa realizuje skrz POST request na stránku https://www.minv.sk/?odcudzene-mot-vozidla
